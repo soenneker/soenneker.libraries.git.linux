@@ -39,6 +39,6 @@
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
-        <Content Include="Resources\git" Pack="true" PackageCopyToOutput="true" />
+        <Content Include="Resources\linux-x64\git\**\*.*" Pack="true" PackageCopyToOutput="true" />
     </ItemGroup>
 </Project>
