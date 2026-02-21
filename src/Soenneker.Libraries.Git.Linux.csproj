@@ -38,12 +38,13 @@
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
-        <ItemGroup>
-            <None Include="Resources\linux-x64\git\**\*.*"
-                  Pack="true"
-                  PackageCopyToOutput="true"
-                  PackagePath="contentFiles\any\any\Resources\linux-x64\git\%(RecursiveDir)"
-                  BuildAction="None" />
-        </ItemGroup>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="Resources\linux-x64\git\**\*.*"
+              Pack="true"
+              PackageCopyToOutput="true"
+              PackagePath="contentFiles\any\any\Resources\linux-x64\git\%(RecursiveDir)"
+              BuildAction="None" />
     </ItemGroup>
 </Project>
