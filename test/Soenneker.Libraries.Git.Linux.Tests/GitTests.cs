@@ -1,10 +1,9 @@
-﻿using Xunit;
 
 namespace Soenneker.Libraries.Git.Linux.Tests;
 
 public sealed class GitTests
 {
-    [Fact]
+    [Test]
     public void Default()
     {
 
