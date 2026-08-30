@@ -5,7 +5,7 @@
 
 # Soenneker.Libraries.Git.Linux
 
-Provides a statically linked git binary for Linux.
+A self-contained Git distribution packaged for Linux x64 .NET applications.
 
 ## Install
 
@@ -13,11 +13,14 @@ Provides a statically linked git binary for Linux.
 dotnet add package Soenneker.Libraries.Git.Linux
 ```
 
-## What it provides
+The distribution is copied beneath the application output directory. Invoke its launcher so the bundled libraries and Git helper programs are resolved correctly:
 
-- Provides a statically linked git binary for Linux.
-- The file is copied to the output directory, and located at the relative path: `Resources\`.
+```csharp
+string git = Path.Combine(
+    AppContext.BaseDirectory,
+    "Resources", "linux-x64", "git", "git.sh");
+```
 
-## How to use it
+Ensure `git.sh` is executable before starting it. Pass each Git argument through `ProcessStartInfo.ArgumentList`, especially repository paths, refs, and commit messages derived from input.
 
-After installation, resolve the packaged file from the output-relative path above. The package deploys the asset but does not invoke it for you.
+This package contains Linux x64 assets and does not provide a managed Git API or select binaries for other platforms.
